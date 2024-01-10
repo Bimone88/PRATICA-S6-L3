@@ -1,0 +1,70 @@
+@import 'colors';
+@import 'spacing';
+@import 'fonts';
+@import 'buttons';
+@import 'mixins';
+@import 'animations';
+
+
+$header-text-color: $text-color;
+$bg-hero-color: $bg-hero;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .navbar {
+    width: 100%;
+    background-color: #333;
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      padding: 0;
+      margin: 0;
+      li {
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+  
+  
+
+  .hero {
+    width: 100%;
+    background-color: $bg-hero-color;
+    //background-image: url('./hero.jpg');
+    background-size: cover;
+    color: white;
+    padding: 50px 0;
+
+    .hero-content {
+      width: 50%;
+      h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        @include title-big;
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      .btn-group {
+        display: flex;
+        justify-content: space-between;
+        .btn {
+          width: calc(30% - 10px);
+        }
+      }
+    }
+
+    .hero-image {
+      img {
+        width: 50%;
+      }
+    }
+  }
+}
